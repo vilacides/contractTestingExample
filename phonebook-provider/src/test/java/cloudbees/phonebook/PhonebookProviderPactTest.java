@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
  */
 @RunWith(SpringRestPactRunner.class)
 @Provider("phonebook-provider")
-@PactFolder("/Users/mariaisabelmunozvilacides/Code/phonebook/phonebook-consumer/target/pacts")
+@PactFolder("../phonebook-consumer/target/pacts")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT, classes = PhonebookController.class)
 public class PhonebookProviderPactTest {
 
