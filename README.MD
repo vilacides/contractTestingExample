@@ -81,7 +81,7 @@ in one test class.
 ## 3. Running the tests in the consumer side
 
 Both the consumer and provider can be built and tested with maven. Remember, these are simple JUnit tests, so to run
-them in in the console execute:
+them in in the console execute in the /contractTestingExample/phonebook-consumer folder:
 
 `mvn clean install`
 
@@ -141,7 +141,7 @@ between the consumer and the provider:
 This Pact file is what will be used by the provider later on to replay the requests and compare if what it is returning
 matches with the consumer expectations.
 
-## 4. Running the tests in the consumer side
+## 4. Running the tests in the provider side
 
 Oh wait! We have not talked about the PhonebookProviderPactTest. This is how it looks like:
 
@@ -162,12 +162,11 @@ What this is really doing is replaying the interactions that are described in th
 the expected response of the pact file. It's like going throught the interactions twice, from the consumer point of view
 and to proove that it matches with what the provider is offering. This can be achieved thanks to the SprintRestPactRunner
 that we use with @RunWith.
-These are real requests to the provider so before you execute the tests you need to make sure the provider is running
-locally at the expected port.
 
 @PactFolder is where we define where the pact file of the consumer lives.
 
-Just like with normal tests, you can execute this command in your console to run the tests in a clean environment:
+Just like with normal tests, you can execute this command in your console to run the tests in a clean environment
+in the /contractTestingExample/phonebook-provider folder:
 
 `mvn clean install`
 
@@ -234,3 +233,5 @@ Failures:
 java.lang.AssertionError:
 0 - / -> [{mismatch=Expected body '684088275' to match '+34684088275' using equality but did not match, diff=}]
 ```
+
+Which is exactly the expected error at origin.
