@@ -1,7 +1,7 @@
 # Contract testing example
 
 This is the simplest example you will ever find about how to do Consumer Driven Contract Testing with PACT
-using Pact JVM JUnit 2.11 and Maven. The simplicity of the provider are consumer are intentional so that
+using Pact JVM JUnit 2.11 and Maven. The simplicity of the provider and the consumer are intentional so that
 you are not lost on implementation details but learn the basic skeleton and basic concepts of Consumer Driven
 Contract testing. During this example repo we will follow the following steps:
 
